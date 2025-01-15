@@ -1,5 +1,4 @@
 /* eslint-disable no-unused-vars */
-import { Link } from "react-router-dom";
 import { Colors } from "../../constant/colors";
 import Tittle from "./Title";
 import NavBar from "./Navbar";

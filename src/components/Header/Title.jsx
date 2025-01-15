@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
-import {  useLocation, useNavigate } from "react-router-dom";
 import LogoImage from "./PNC-Soft-Tech-Rect.svg";
 import {
   BiLogoFacebook,
