@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.slick-prev:before,
+.slick-next:before {
+	color: #041436;
+}
+
+.slick-dots li.slick-active button:before {
+	color: orange !important;
+}
+.slick-dots li button:before {
+	color: orange;
+}

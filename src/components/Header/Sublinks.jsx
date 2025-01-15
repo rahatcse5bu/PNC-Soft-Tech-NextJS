@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React from "react";
-import { Link } from "react-router-dom";
 import DrobdownIcon from "../../assets/icons/Dropdown.jsx";
+import Link from "next/link.js";
 
 const SubLinks = ({ navItem, setOpenNav }) => {
   return (
@@ -23,7 +23,7 @@ const SubLinks = ({ navItem, setOpenNav }) => {
           ) : (
             <Link
               key={_in}
-              to={_linkItem.path}
+              href={_linkItem.path}
               className="whitespace-no-wrap block py-2 px-4 hover:bg-gray-400"
               onClick={() => setOpenNav(false)}
             >

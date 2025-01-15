@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import {
   Navbar,
   MobileNav,
@@ -9,7 +9,8 @@ import {
 } from "@material-tailwind/react";
 import { navData } from "./navigation_data";
 import SubLinks from "./Sublinks.jsx";
-import "../../assets/styles/nav-bar.css";
+import Link from "next/link";
+
 
 export default function NavBar() {
   const [filteredNavData, setFilteredNavData] = useState(navData);
@@ -39,7 +40,7 @@ export default function NavBar() {
                 : "nav-item-primary"
             } `}
           >
-            <Link to={_navDataItem.path} onClick={() => setOpenNav(false)}>
+            <Link href={_navDataItem.path} onClick={() => setOpenNav(false)}>
               {_navDataItem.title}
             </Link>
           </Typography>

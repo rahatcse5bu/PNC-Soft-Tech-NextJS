@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
+import Link from "next/link";
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import {
   BiLogoFacebook,
   BiSolidAddToQueue,
@@ -80,7 +80,7 @@ const Footer = () => {
               <div className=" text-[18px] ">
                 <BiSolidAddToQueue />
               </div>
-              <Link to="/services" className=" text-[18px] ">
+              <Link href="/services" className=" text-[18px] ">
                 Services
               </Link>
             </div>
@@ -89,7 +89,7 @@ const Footer = () => {
               <div className=" text-[18px] ">
                 <BiSolidAddToQueue />
               </div>
-              <Link to="/faq" className=" text-[18px] ">
+              <Link href="/faq" className=" text-[18px] ">
                 FAQ
               </Link>
             </div>
@@ -98,7 +98,7 @@ const Footer = () => {
               <div className=" text-[18px] ">
                 <BiSolidAddToQueue />
               </div>
-              <Link to="/team" className=" text-[18px] ">
+              <Link href="/team" className=" text-[18px] ">
                 Team
               </Link>
             </div>

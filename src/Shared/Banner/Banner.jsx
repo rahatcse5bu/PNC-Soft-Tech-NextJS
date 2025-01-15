@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { Colors } from "../../constant/colors";
 import banner from "../../assets/img/banner.jpg";
+import Link from "next/link";
 const Banner = ({ title, linkText }) => {
 	const elementStyle = {
 		color: Colors.textColor,
@@ -39,7 +39,7 @@ const Banner = ({ title, linkText }) => {
 					</h2>
 
 					<h5>
-						<Link className="ml-2" to="/">
+						<Link className="ml-2" href="/">
 							HOME .{" "}
 						</Link>{" "}
 						<span style={spanElement}>{linkText}</span>

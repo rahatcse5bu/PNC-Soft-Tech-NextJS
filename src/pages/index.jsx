@@ -1,17 +1,15 @@
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import MainLayout from "../Layout/MainLayout";
 
-const HomePage = () => {
-  return (
-    <>
-      <Header />
-      <main>
-        <h1>Welcome to My Next.js App</h1>
-        <p>This is the home page of the application.</p>
-      </main>
-      <Footer />
-    </>
-  );
+const HomePage2 = () => {
+	return (
+		<div>
+             <Toaster position="bottom-right" />
+			<h1>Welcome to the Home Page</h1>
+			<p>This is the main content.</p>
+		</div>
+	);
 };
 
-export default HomePage;
+HomePage2.getLayout = (page) => <MainLayout>{page}</MainLayout>;
+
+export default HomePage2;

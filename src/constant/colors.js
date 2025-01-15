@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 import img from "../assets/profile/pnc.jpg";
-import React from "react";
 import sabuj from "../assets/profile/img/sabuj.jpg";
 import anis from "../assets/profile/img/anis.jpg";
 import rahat from "../assets/profile/img/rahat.JPG";
