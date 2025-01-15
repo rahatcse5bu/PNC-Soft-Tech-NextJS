@@ -1,11 +1,11 @@
 import { Outlet } from "react-router-dom";
 import ProjectTab from "../components/ProjectTab/ProjectTab";
 
-const ProjectLayout = () => {
+const ProjectLayout = ({ children }) => {
 	return (
 		<div>
 			<ProjectTab />
-			<Outlet />
+			<main>{children}</main>
 		</div>
 	);
 };
