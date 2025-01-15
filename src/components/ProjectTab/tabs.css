@@ -1,0 +1,28 @@
+/* Styling for the tab buttons */
+.react-tabs__tab {
+	display: inline-block;
+	padding: 5px 20px;
+	background-color: white;
+	border: 1px solid orange;
+	border-radius: 4px;
+	margin-right: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	text-align: center;
+	color: orange;
+	border-radius: 100px;
+}
+
+/* Styling for the selected tab button */
+.react-tabs__tab--selected {
+	background-color: orange;
+	color: #fff;
+	border: 1px solid orange;
+}
+
+.react-tabs__tab-list {
+	border-bottom: 1px solid white;
+	margin: 50px 0 10px;
+	padding: 0;
+	text-align: center;
+}
