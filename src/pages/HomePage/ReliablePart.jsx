@@ -1,7 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-unused-vars */
 import React from 'react'
-import img from '../../assets/img/banner.jpg'
+// import img from '../../assets/img/banner.jpg'
+import img from '../../../public/img/banner.jpg'
 import Image from 'next/image'
 const ReliablePart = () => {
   
@@ -19,7 +20,7 @@ const ReliablePart = () => {
                  
                   <div className=' p-8 bg-[#041436] flex flex-col self-center '>
                        <div className='h-20 w-20 mb-2  self-center'>
-                        <Image src ={img} height={300} width={300} />
+                        <Image src ={"/img/banner.jpg"}  width={300} priority/>
                        </div>
                             <h1 className='self-center text-[#fff] text-[22px] font-bold '>Reliable Solutions</h1>
                             <p className='text-center text-[16px] mt-2 text-gray-300 font-medium '>Printer took a galley of type and scrambled it to make a type specimenbook. It has survived not only five.
@@ -28,7 +29,7 @@ const ReliablePart = () => {
 
                   <div className=' p-8 lg:py-[110px] lg:px-[80px] flex flex-col self-center bg-[#00FAA8] h-auto w-auto lg:w-[900px] lg:h-[420px] z-40 '>
                           <div className='h-20 w-20 mb-2  self-center'>
-                          <Image src ={img} height={300} width={300}/>
+                          <Image src ={"/img/banner.jpg"}  width={300} priority/>
                           </div>
                             <h1 className='self-center text-[#fff] text-[22px] font-bold '>Reliable Solutions</h1>
                             <p className='text-center text-[16px] mt-2 text-gray-200 font-medium '>Printer took a galley of type and scrambled it to make a type specimenbook. It has survived not only five.
@@ -37,7 +38,7 @@ const ReliablePart = () => {
 
                    <div className=' p-8 bg-[#041436] flex flex-col self-center '>
                            <div className='h-24 w-24 mb-2 self-center'>
-                           <Image src ={img} className=' object-cover ' height={300} width={300}/>
+                           <Image src ={'/img/banner.jpg'} className=' object-cover ' width={300} priority/>
                            </div>
                             <h1 className='self-center text-[#fff] text-[22px] font-bold '>Reliable Solutions</h1>
                             <p className='text-center text-[16px] mt-2 text-gray-300 font-medium '>Printer took a galley of type and scrambled it to make a type specimenbook. It has survived not only five.

@@ -12,15 +12,22 @@ import Link from "next/link";
 
 //bg-gradient-to-r from-teal-200 to-teal-500
 export default function Tittle() {
+  // const openWhatsApp = () => {
+  //   // Construct the URL to open WhatsApp
+  //   const phoneNumber = "+8801793278360";
+  //   const whatsappURL = `https://wa.me/${phoneNumber}`;
+
+  //   // Open WhatsApp in a new tab
+  //   window.open(whatsappURL, "_blank");
+  // };
   const openWhatsApp = () => {
-    // Construct the URL to open WhatsApp
-    const phoneNumber = "+8801793278360";
-    const whatsappURL = `https://wa.me/${phoneNumber}`;
-
-    // Open WhatsApp in a new tab
-    window.open(whatsappURL, "_blank");
+    if (typeof window !== "undefined") {
+      const phoneNumber = "+8801793278360";
+      const whatsappURL = `https://wa.me/${phoneNumber}`;
+      window.open(whatsappURL, "_blank");
+    }
   };
-
+  
   return (
     <nav
       className="title-container h-[80px] bg-gradient-to-r from-slate-900 to-slate-700   "

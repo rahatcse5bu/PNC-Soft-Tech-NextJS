@@ -1,11 +1,18 @@
 /* eslint-disable no-unused-vars */
-import img from "../assets/profile/pnc.jpg";
-import sabuj from "../assets/profile/img/sabuj.jpg";
-import anis from "../assets/profile/img/anis.jpg";
-import rahat from "../assets/profile/img/rahat.JPG";
-import subal from "../assets/profile/img/subal.jpg";
-import sujan from "../assets/profile/img/sujan.jpg";
-import tarikul from "../assets/profile/img/tarikul.jpg";
+// import img from "../../public/profile/pnc.jpg"; 
+import img from "../../public/profile/pnc.jpg"; 
+// import sabuj from "../assets/profile/img/sabuj.jpg";
+// import anis from "../assets/profile/img/anis.jpg";
+// import rahat from "../assets/profile/img/rahat.JPG";
+// import subal from "../assets/profile/img/subal.jpg";
+// import sujan from "../assets/profile/img/sujan.jpg";
+// import tarikul from "../assets/profile/img/tarikul.jpg";
+import sabuj from "../../public/profile/img/sabuj.jpg";
+import anis from "../../public/profile/img/anis.jpg";
+import rahat from "../../public/profile/img/rahat.JPG";
+import subal from "../../public/profile/img/subal.jpg";
+import sujan from "../../public/profile/img/sujan.jpg";
+import tarikul from "../../public/profile/img/tarikul.jpg";
 
 export const Colors = {
 	primary: "#041436",

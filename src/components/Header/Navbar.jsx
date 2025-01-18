@@ -14,13 +14,25 @@ import Link from "next/link";
 export default function NavBar() {
   const [filteredNavData, setFilteredNavData] = useState(navData);
   const [openNav, setOpenNav] = useState(false);
-
   useEffect(() => {
-    window.addEventListener(
-      "resize",
-      () => window.innerWidth >= 960 && setOpenNav(false)
-    );
+    const handleResize = () => {
+      if (window.innerWidth >= 960) {
+        setOpenNav(false);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+  
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
+  
+  // useEffect(() => {
+  //   window.addEventListener(
+  //     "resize",
+  //     () => window.innerWidth >= 960 && setOpenNav(false)
+  //   );
+  // }, []);
 
   const NavList = () => (
     <ul className="box-border border-none nav-list-ul py-3 pl-[10px] flex flex-col lg:flex-row  justify-evenly ">
