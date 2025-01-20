@@ -1,3 +1,4 @@
+'use-client'
 /* eslint-disable no-mixed-spaces-and-tabs */
 /* eslint-disable no-unused-vars */
 import React from 'react'

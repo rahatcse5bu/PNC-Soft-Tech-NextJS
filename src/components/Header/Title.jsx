@@ -1,3 +1,4 @@
+"use client"
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
 import LogoImage from "./PNC-Soft-Tech-Rect.svg";
@@ -11,7 +12,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 //bg-gradient-to-r from-teal-200 to-teal-500
-export default function Tittle() {
+export default function Title() {
   // const openWhatsApp = () => {
   //   // Construct the URL to open WhatsApp
   //   const phoneNumber = "+8801793278360";

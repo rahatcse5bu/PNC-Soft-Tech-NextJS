@@ -1,7 +1,8 @@
+"use client"
 /* eslint-disable no-unused-vars */
 import { Colors } from "../../constant/colors";
-import Tittle from "./Title";
 import NavBar from "./Navbar";
+import Title from "./Title";
 const Header = () => {
   console.log(Colors.primary);
   const elementStyle = {
@@ -11,7 +12,7 @@ const Header = () => {
 
   return (
     <>
-      {/* <Tittle /> */}
+      <Title />
       <NavBar />
     </>
   );
