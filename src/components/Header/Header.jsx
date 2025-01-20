@@ -1,7 +1,7 @@
 "use client"
 /* eslint-disable no-unused-vars */
 import { Colors } from "../../constant/colors";
-import NavBar from "./Navbar";
+import NavBarAlt from "./NavbarAlt";
 import Title from "./Title";
 const Header = () => {
   console.log(Colors.primary);
@@ -13,7 +13,7 @@ const Header = () => {
   return (
     <>
       <Title />
-      <NavBar />
+      <NavBarAlt />
     </>
   );
 };
