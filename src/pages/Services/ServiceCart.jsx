@@ -9,7 +9,7 @@ const ServiceCart = ({serviceDetail}) => {
   return (
     <Link href='/service-details' className='h-auto w-[300px] md:w-[340px] shadow-[0_5px_30px_0px_rgba(0,0,0,0.1)] rounded-[5px] flex flex-col gap-2  '>
        <div className='h-[210px] w-[300px] md:w-[340px] '>
-            <Image className='h-full w-full object-cover rounded-t-[5px] ' src ={serviceDetail.image} alt ='Service Image' height={300} width={300}/>
+            <Image className='h-full w-full object-cover rounded-t-[5px] ' src ={"/profile/pnc.jpg"} alt ='Service Image' height={300} width={300}/>
        </div>
        <div className='py-[10px] px-[16px]  flex flex-col gap-2'>
             <h1 className='text-black text-[22px] font-bold leading-[40px] '>{serviceDetail.title}</h1>
