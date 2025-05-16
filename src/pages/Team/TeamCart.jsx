@@ -42,6 +42,5 @@ const TeamCart = ({teamDetail}) => {
     </div>
   )
 }
-}
 
 export default TeamCart

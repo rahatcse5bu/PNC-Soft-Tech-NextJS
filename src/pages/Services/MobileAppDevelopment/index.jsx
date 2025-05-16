@@ -1,6 +1,6 @@
 import React from 'react'
-import Banner from '../../Shared/Banner/Banner'
-import { ScrollToTop } from '../../constant/ScrollToTop'
+import Banner from '../../../Shared/Banner/Banner'
+import { ScrollToTop } from '../../../constant/ScrollToTop'
 import Image from 'next/image'
 import { FaCode, FaTabletAlt, FaMobileAlt, FaRocket, FaRegCheckCircle } from 'react-icons/fa'
 import Link from 'next/link'

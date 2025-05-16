@@ -2,7 +2,6 @@
 
 const nextConfig = {
     reactStrictMode: true,
-    swcMinify: true, // Enable SWC minification for faster builds
     images: {
       domains: ['pncsoft.tech'],
       formats: ['image/avif', 'image/webp'],

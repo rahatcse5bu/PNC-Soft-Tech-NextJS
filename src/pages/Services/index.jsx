@@ -4,11 +4,12 @@ import Banner from '../../Shared/Banner/Banner'
 import Services from './Services'
 import ServiceList from './ServiceList'
 import { ScrollToTop } from '../../constant/ScrollToTop'
+import MainLayout from '../../Layout/MainLayout'
 
 
 const ServicePage = () => {
   return (
-    <div  >
+    <div>
         <ScrollToTop />
         <Banner title="Services" linkText="Service" />
         <Services />
@@ -16,5 +17,7 @@ const ServicePage = () => {
     </div>
   )
 }
+
+ServicePage.getLayout = (page) => <MainLayout>{page}</MainLayout>;
 
 export default ServicePage

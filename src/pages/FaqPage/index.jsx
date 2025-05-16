@@ -4,6 +4,7 @@ import Banner from '../../Shared/Banner/Banner'
 import GenQesPart from './GenQesPart'
 import AskQuestion from './AskQuestion'
 import { ScrollToTop } from '../../constant/ScrollToTop'
+import MainLayout from '../../Layout/MainLayout'
 
 const FaqPage = () => {
   return (
@@ -15,5 +16,7 @@ const FaqPage = () => {
     </div>
   )
 }
+
+FaqPage.getLayout = (page) => <MainLayout>{page}</MainLayout>;
 
 export default FaqPage
