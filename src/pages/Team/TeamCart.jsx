@@ -2,43 +2,46 @@
 /* eslint-disable no-unused-vars */
 import Image from 'next/image';
 import React from 'react'
-import { BiLogoFacebook , BiLogoLinkedin, BiLogoSkype, BiLogoInstagram } from 'react-icons/bi';
-
-
+import { BiLogoFacebook, BiLogoLinkedin, BiLogoSkype, BiLogoInstagram } from 'react-icons/bi';
 
 const TeamCart = ({teamDetail}) => {
   return (
-    <div className='h-[400px] w-[280px] hover:shadow-[0_5px_30px_0px_rgba(0,0,0,0.1)] rounded-[10px] flex flex-col gap-2 border-solid border-[1px] border-gray-200 '>
-       <div className='h-[240px] w-[278px] '>
-            <Image className='h-full w-full object-cover rounded-t-[10px] ' src ={teamDetail.src} alt ='Service Image' height={300} width={300} />
+    <div className='bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 group'>
+       <div className='h-[270px] w-full relative overflow-hidden'>
+            <Image 
+              className='h-full w-full object-cover transition-transform duration-500 group-hover:scale-110' 
+              src={teamDetail.src} 
+              alt={teamDetail.name} 
+              height={300} 
+              width={300} 
+            />
+            <div className='absolute inset-0 bg-gradient-to-t from-[#041436]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
        </div>
-       <div className='py-[10px] px-[16px]  flex flex-col gap-2'>
-            <h1 className='text-black text-[22px] font-bold leading-[40px] self-center '>{teamDetail.name}</h1>
-            <p className=' text-[#676e7c] leading-[26px] font-normal text-[16px] self-center '>{teamDetail.designation}</p>
+       <div className='py-6 px-4 text-center'>
+            <h2 className='text-[#041436] text-xl font-bold mb-2 group-hover:text-[#00FAA8] transition-colors duration-300'>{teamDetail.name}</h2>
+            <p className='text-gray-600 text-sm mb-4'>{teamDetail.designation}</p>
        </div>
        
-       <div className='flex flex-row justify-evenly px-[20px] mt-[-5px] '>
+       <div className='flex justify-center gap-4 pb-6'>
+            <a href="#" className='w-9 h-9 flex items-center justify-center border border-[#00FAA8] rounded-full text-[#00FAA8] hover:bg-[#00FAA8] hover:text-white transition-colors duration-300'>
+                <BiLogoFacebook className='text-lg' />
+            </a>
 
-            <div className=' p-1 border-solid border-[1px] border-[#00FAA8] hover:bg-[#00FAA8] rounded-full '>
-                <BiLogoFacebook className='text-[22px] text-[#00FAA8] hover:text-[#fff] ' />
-            </div>
+            <a href="#" className='w-9 h-9 flex items-center justify-center border border-[#00FAA8] rounded-full text-[#00FAA8] hover:bg-[#00FAA8] hover:text-white transition-colors duration-300'>
+                <BiLogoInstagram className='text-lg' />
+            </a>
 
-            <div className=' p-1 border-solid border-[1px] border-[#00FAA8] hover:bg-[#00FAA8] rounded-full '>
-                <BiLogoInstagram className='text-[22px] text-[#00FAA8] hover:text-[#fff] ' />
-            </div>
+            <a href="#" className='w-9 h-9 flex items-center justify-center border border-[#00FAA8] rounded-full text-[#00FAA8] hover:bg-[#00FAA8] hover:text-white transition-colors duration-300'>
+                <BiLogoLinkedin className='text-lg' />
+            </a>
 
-            <div className=' p-1 border-solid border-[1px] border-[#00FAA8] hover:bg-[#00FAA8] rounded-full '>
-                <BiLogoLinkedin className='text-[22px] text-[#00FAA8] hover:text-[#fff] ' />
-            </div>
-
-            <div className=' p-1 border-solid border-[1px] border-[#00FAA8] hover:bg-[#00FAA8] rounded-full '>
-                <BiLogoSkype className='text-[22px] text-[#00FAA8] hover:text-[#fff] ' />
-            </div>
-
-            
+            <a href="#" className='w-9 h-9 flex items-center justify-center border border-[#00FAA8] rounded-full text-[#00FAA8] hover:bg-[#00FAA8] hover:text-white transition-colors duration-300'>
+                <BiLogoSkype className='text-lg' />
+            </a>
        </div>
     </div>
   )
+}
 }
 
 export default TeamCart

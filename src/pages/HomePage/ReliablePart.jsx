@@ -1,58 +1,62 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-unused-vars */
 import React from 'react'
-// import img from '../../assets/img/banner.jpg'
 import img from '../../../public/img/banner.jpg'
 import Image from 'next/image'
+import { FaLaptopCode, FaMobileAlt, FaServer } from 'react-icons/fa'
+
 const ReliablePart = () => {
-  
   return (
-    <div className='w-full h-auto bg-white flex flex-col  self-center py-10 '>
-        <div className='self-center mx-8  flex flex-col mt-20 mb-16 '>
-            <h1 className='text-black text-[50px] leading-[70px] font-bold text-center pb-5 ' >Welcom to PNC Soft Tech</h1>
-            <p className=' text-[18px]  lg:mx-[20%] text-black font-normal text-center '>
-            PNC Soft Tech is a mobile app and web development company that offers a wide range of services and features using various technologies
-            </p>  
-        </div>
-
-        <div className='mt-10 mx-10 lg:mx-20 text-[#fff] '>
-            <div className='  flex flex-col md:flex-row gap-8 lg:gap-0  w-full h-auto lg:h-[370px] '>
-                 
-                  <div className=' p-8 bg-[#041436] flex flex-col self-center '>
-                       <div className='h-20 w-20 mb-2  self-center'>
-                        <Image src ={"/img/banner.jpg"}  width={300} height={300} priority/>
-                       </div>
-                            <h1 className='self-center text-[#fff] text-[22px] font-bold '>Reliable Solutions</h1>
-                            <p className='text-center text-[16px] mt-2 text-gray-300 font-medium '>Printer took a galley of type and scrambled it to make a type specimenbook. It has survived not only five.
-                            </p>
-                   </div>
-
-                  <div className=' p-8 lg:py-[110px] lg:px-[80px] flex flex-col self-center bg-[#00FAA8] h-auto w-auto lg:w-[900px] lg:h-[420px] z-40 '>
-                          <div className='h-20 w-20 mb-2  self-center'>
-                          <Image src ={"/img/banner.jpg"}  width={300} height={300} priority/>
-                          </div>
-                            <h1 className='self-center text-[#fff] text-[22px] font-bold '>Reliable Solutions</h1>
-                            <p className='text-center text-[16px] mt-2 text-gray-200 font-medium '>Printer took a galley of type and scrambled it to make a type specimenbook. It has survived not only five.
-                            </p>
-                   </div>
-
-                   <div className=' p-8 bg-[#041436] flex flex-col self-center '>
-                           <div className='h-24 w-24 mb-2 self-center'>
-                           <Image src ={'/img/banner.jpg'} className=' object-cover ' width={300} height={300} priority/>
-                           </div>
-                            <h1 className='self-center text-[#fff] text-[22px] font-bold '>Reliable Solutions</h1>
-                            <p className='text-center text-[16px] mt-2 text-gray-300 font-medium '>Printer took a galley of type and scrambled it to make a type specimenbook. It has survived not only five.
-                            </p>
-                   </div>
+    <div className='w-full h-auto bg-white py-20'>
+        <div className='max-w-7xl mx-auto px-6 md:px-10'>
+            <div className='text-center mb-16'>
+                <h2 className='text-[#00FAA8] text-lg font-semibold uppercase tracking-wider mb-3'>Why Choose Us</h2>
+                <h1 className='text-[#041436] text-4xl md:text-5xl font-bold mb-6'>Welcome to PNC Soft Tech</h1>
+                <p className='text-gray-600 text-lg max-w-3xl mx-auto'>
+                    We deliver innovative digital solutions with expertise in mobile app and web development,
+                    utilizing the latest technologies to transform your ideas into reality.
+                </p>  
             </div>
 
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+                <div className='bg-[#041436] rounded-lg overflow-hidden shadow-lg transform transition-transform duration-300 hover:-translate-y-2'>
+                    <div className='p-8 text-center'>
+                        <div className='mx-auto w-16 h-16 flex items-center justify-center bg-[#00FAA8]/20 rounded-full mb-6'>
+                            <FaLaptopCode className='text-[#00FAA8] text-3xl' />
+                        </div>
+                        <h3 className='text-white text-xl font-bold mb-4'>Web Development</h3>
+                        <p className='text-gray-300'>
+                            Custom web solutions using cutting-edge technologies like React, Next.js, and MERN stack to build fast, responsive, and scalable applications.
+                        </p>
+                    </div>
+                </div>
 
+                <div className='bg-[#00FAA8] rounded-lg overflow-hidden shadow-lg transform transition-transform duration-300 hover:-translate-y-2 relative z-10'>
+                    <div className='p-8 text-center'>
+                        <div className='mx-auto w-16 h-16 flex items-center justify-center bg-white/20 rounded-full mb-6'>
+                            <FaMobileAlt className='text-white text-3xl' />
+                        </div>
+                        <h3 className='text-white text-xl font-bold mb-4'>Mobile App Development</h3>
+                        <p className='text-gray-100'>
+                            Cross-platform mobile applications with Flutter and React Native that provide native performance and exceptional user experience on all devices.
+                        </p>
+                    </div>
+                </div>
+
+                <div className='bg-[#041436] rounded-lg overflow-hidden shadow-lg transform transition-transform duration-300 hover:-translate-y-2'>
+                    <div className='p-8 text-center'>
+                        <div className='mx-auto w-16 h-16 flex items-center justify-center bg-[#00FAA8]/20 rounded-full mb-6'>
+                            <FaServer className='text-[#00FAA8] text-3xl' />
+                        </div>
+                        <h3 className='text-white text-xl font-bold mb-4'>API Integration</h3>
+                        <p className='text-gray-300'>
+                            Seamless API integration services for web and mobile applications, connecting your software with third-party services and databases.
+                        </p>
+                    </div>
+                </div>            </div>
         </div>
-
-              
     </div>
-        
-  )
+  );
 }
 
 export default ReliablePart

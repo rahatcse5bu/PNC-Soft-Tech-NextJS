@@ -34,23 +34,21 @@ export default function NavBarAlt() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const NavList = () => (
-    <ul className="flex flex-col lg:flex-row lg:items-center gap-4">
+  const NavList = () => (    <ul className="flex flex-col lg:flex-row lg:items-center gap-6">
       {navData.map((item, index) => (
-        <li key={index} className="relative">
+        <li key={index} className="relative py-2 lg:py-0">
           {item.subLinks ? (
             <div className="group">
-              <span className="cursor-pointer hover:text-blue-500">{item.title}</span>
-              <ul className="absolute left-0 mt-2 hidden w-40 bg-white shadow-lg group-hover:block">
+              <span className="cursor-pointer hover:text-[#00FAA8] transition duration-300 font-medium">{item.title}</span>
+              <ul className="absolute left-0 mt-2 hidden w-48 bg-white shadow-lg rounded-md group-hover:block transition-all duration-300 ease-in-out">
                 {item.subLinks.map((subLink, subIndex) => (
-                  <li key={subIndex} className="p-2 hover:bg-gray-200">
-                    <Link href={subLink.path}>{subLink.title}</Link>
+                  <li key={subIndex} className="p-3 hover:bg-gray-100 text-[#041436]">
+                    <Link href={subLink.path} className="block transition duration-300">{subLink.title}</Link>
                   </li>
                 ))}
               </ul>
             </div>
-          ) : (
-            <Link href={item.path} className="hover:text-blue-500">
+          ) : (            <Link href={item.path} className="hover:text-[#00FAA8] transition duration-300 font-medium">
               {item.title}
             </Link>
           )}
@@ -58,17 +56,16 @@ export default function NavBarAlt() {
       ))}
     </ul>
   );
-
   return (
-    <nav className="sticky top-0 z-10 bg-gradient-to-r from-[#071952] to-[#071952] p-4 text-white">
-      <div className="flex justify-between items-center">
-        <h1 className="text-xl font-bold">My Navbar</h1>
+    <nav className="sticky top-0 z-10 bg-gradient-to-r from-[#041436] to-[#071952] p-4 text-white shadow-lg">
+      <div className="flex justify-between items-center max-w-7xl mx-auto">
+        <h1 className="text-xl font-bold text-[#00FAA8]">PNC Soft Tech</h1>
 
         {/* Mobile Menu Toggle */}
         {isMobile && (
           <button
             onClick={() => setOpenNav(!openNav)}
-            className="lg:hidden text-white focus:outline-none"
+            className="lg:hidden text-white focus:outline-none transition-transform duration-300 ease-in-out"
           >
             {openNav ? (
               <svg

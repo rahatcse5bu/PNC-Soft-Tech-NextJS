@@ -12,13 +12,12 @@ import { ScrollToTop } from "../../constant/ScrollToTop";
 import BestPart from "./BestPart";
 const HomePage = () => {
   return (
-    <div>
-      <Head>
-        <title>Home | PNC Soft Tech</title>
-        <meta property="og:title" content="Home | PNC Soft Tech" />
-        <meta property="og:description" content="Welcome to PNC Soft Tech!" />
-        <meta
-          name="keywords"
+    <div>      <Head>
+        <title>PNC Soft Tech | Leading Web & Mobile App Development Company</title>
+        <meta name="description" content="PNC Soft Tech delivers high-quality web and mobile app development solutions with Flutter, React, Next.js and MERN stack technologies. Get expert solutions for your digital needs." />
+        <meta property="og:title" content="PNC Soft Tech | Leading Web & Mobile App Development Company" />
+        <meta property="og:description" content="PNC Soft Tech delivers high-quality web and mobile app development solutions with Flutter, React, Next.js and MERN stack technologies. Get expert solutions for your digital needs." />
+        <meta name="keywords" content="web development, mobile app development, flutter apps, react development, nextjs, MERN stack, software company, Bangladesh, IT solutions, custom software" />
           content="Software, app, development, pnc, soft, software, website, mern stack,flutter, flutter app"
         />
         <meta name="author" content="Your Name" />

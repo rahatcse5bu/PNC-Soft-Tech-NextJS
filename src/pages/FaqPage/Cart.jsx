@@ -1,24 +1,39 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import React ,{useState} from 'react'
-import { GrAddCircle } from 'react-icons/gr';
-import {  MdOutlineRemoveCircleOutline , MdAddCircleOutline } from 'react-icons/md';
+import React, { useState } from 'react'
+import { motion } from 'framer-motion';
+import { HiChevronDown, HiChevronUp } from 'react-icons/hi';
 
-const Cart = ({title, details}) => {
-    const [expanded, setExpanded] = useState(true)
+const Cart = ({ title, details }) => {
+  const [expanded, setExpanded] = useState(false)
+
   return (
-    <div className='h-auto w-full mb-[10px] bg-[#fff] pl-[25px] border-solid border-[1px] border-[#e9e9e9] rounded-[5px] '>
-        <div onClick={() => setExpanded(!expanded)} className='flex flex-row justify-between py-[20px] pr-[25px] transition ease-in duration-700'>
-            <p className='text-[16px] text-[#041436] font-medium   '>{title}</p>
-             { expanded?
-                   <MdAddCircleOutline className='text-[22px] text-[#00FAA8] hover:text-black ' />
-               :
-                <MdOutlineRemoveCircleOutline className='text-[22px] hover:text-[#00FAA8] text-black ' />
-             }
-            
-       </div>
-            <p className={`pr-[25px] pb-[25px] text-[] text-[#676e7c]  ${expanded?'hidden':''} `}>{details}</p>
-        
+    <div className='mb-4 border border-gray-200 rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition-shadow duration-300'>
+      <button 
+        onClick={() => setExpanded(!expanded)} 
+        className='w-full flex justify-between items-center p-5 text-left focus:outline-none'
+      >
+        <h3 className={`text-[16px] font-medium transition-colors duration-300 ${expanded ? 'text-[#00FAA8]' : 'text-[#041436]'}`}>
+          {title}
+        </h3>
+        {expanded ? (
+          <HiChevronUp className='text-[#00FAA8] text-xl flex-shrink-0' />
+        ) : (
+          <HiChevronDown className='text-[#041436] text-xl flex-shrink-0' />
+        )}
+      </button>
+      
+      {expanded && (
+        <motion.div
+          initial={{ height: 0, opacity: 0 }}
+          animate={{ height: 'auto', opacity: 1 }}
+          exit={{ height: 0, opacity: 0 }}
+          transition={{ duration: 0.3 }}
+          className='px-5 pb-5'
+        >
+          <p className='text-gray-600'>{details}</p>
+        </motion.div>
+      )}
     </div>
   )
 }

@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "project_name": "E-Commerce Platform for Fashion",
+    "project_image_url": "/profile/pnc.jpg",
+    "project_description": "A fully responsive e-commerce website with advanced filtering, user authentication, payment integration, and admin dashboard for a fashion brand.",
+    "project_type": "website",
+    "category": "E-commerce",
+    "technologies": ["React", "Node.js", "MongoDB", "Express", "Stripe API"],
+    "client": "Fashion Brand",
+    "completion_date": "2023-09-15",
+    "project_url": "https://fashion-store.example.com",
+    "features": [
+      "User authentication and profiles",
+      "Product filtering and search",
+      "Shopping cart and checkout",
+      "Payment processing",
+      "Order tracking",
+      "Admin dashboard"
+    ]
+  },
+  {
+    "id": 2,
+    "project_name": "Healthcare Management System",
+    "project_image_url": "/profile/pnc.jpg",
+    "project_description": "A comprehensive healthcare management system for clinics with appointment scheduling, patient records, billing, and reporting features.",
+    "project_type": "website",
+    "category": "Healthcare",
+    "technologies": ["Next.js", "TypeScript", "PostgreSQL", "Tailwind CSS", "Chart.js"],
+    "client": "Medical Clinic",
+    "completion_date": "2023-11-22",
+    "project_url": "https://clinic-management.example.com",
+    "features": [
+      "Patient registration and management",
+      "Appointment scheduling",
+      "Medical records management",
+      "Billing and invoicing",
+      "Reporting and analytics",
+      "Staff management"
+    ]
+  },
+  {
+    "id": 3,
+    "project_name": "Fitness Tracking Mobile App",
+    "project_image_url": "/profile/pnc.jpg",
+    "project_description": "A mobile application for tracking workouts, nutrition, progress, and setting fitness goals with personalized recommendations.",
+    "project_type": "app",
+    "category": "Health & Fitness",
+    "technologies": ["Flutter", "Firebase", "RESTful APIs", "Google Fit Integration"],
+    "client": "Fitness Center",
+    "completion_date": "2024-01-10",
+    "project_url": "https://play.google.com/store/apps/details?id=com.example.fitnessapp",
+    "features": [
+      "Workout tracking and planning",
+      "Nutrition logging and analysis",
+      "Progress tracking with charts",
+      "Goal setting and achievements",
+      "Social sharing and community",
+      "Personalized recommendations"
+    ]
+  },
+  {
+    "id": 4,
+    "project_name": "Real Estate Property Management",
+    "project_image_url": "/profile/pnc.jpg",
+    "project_description": "A web-based property management system for real estate agents and property owners with listing, tenant management, and financial reporting.",
+    "project_type": "website",
+    "category": "Real Estate",
+    "technologies": ["React", "Node.js", "MongoDB", "AWS S3", "Google Maps API"],
+    "client": "Real Estate Agency",
+    "completion_date": "2023-08-05",
+    "project_url": "https://property-management.example.com",
+    "features": [
+      "Property listing and search",
+      "Virtual tours and image galleries",
+      "Tenant application and screening",
+      "Rent collection and tracking",
+      "Maintenance request management",
+      "Financial reporting"
+    ]
+  },
+  {
+    "id": 5,
+    "project_name": "Food Delivery Platform",
+    "project_image_url": "/profile/pnc.jpg",
+    "project_description": "A comprehensive food delivery platform with restaurant partnerships, order tracking, payment processing, and delivery management.",
+    "project_type": "app",
+    "category": "Food & Beverage",
+    "technologies": ["React Native", "Node.js", "MongoDB", "Redux", "Stripe", "Google Maps API"],
+    "client": "Restaurant Association",
+    "completion_date": "2023-10-18",
+    "project_url": "https://food-delivery.example.com",
+    "features": [
+      "Restaurant browsing and search",
+      "Menu customization",
+      "Order placement and tracking",
+      "Payment processing",
+      "Delivery tracking",
+      "Rating and review system"
+    ]
+  },
+  {
+    "id": 6,
+    "project_name": "Learning Management System",
+    "project_image_url": "/profile/pnc.jpg",
+    "project_description": "An educational platform for schools with course management, assignment submission, grading, and communication tools for teachers and students.",
+    "project_type": "website",
+    "category": "Education",
+    "technologies": ["Next.js", "PostgreSQL", "AWS", "WebRTC", "PDF.js"],
+    "client": "Educational Institution",
+    "completion_date": "2024-02-28",
+    "project_url": "https://lms.example.com",
+    "features": [
+      "Course creation and management",
+      "Assignment submission and grading",
+      "Video conferencing for classes",
+      "Discussion forums",
+      "Progress tracking and reporting",
+      "Resource library"
+    ]
+  }
+]

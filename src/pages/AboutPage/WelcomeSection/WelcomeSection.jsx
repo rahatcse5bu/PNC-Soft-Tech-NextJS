@@ -44,29 +44,20 @@ const Left = () => {
 	return (
 		<div className="md:w-[45%] sm:[50%] w-[90%] mx-auto mt-10 md:mx-10 sm:mx-5">
 			<div>
-				<h3 className="font-semibold text-xl text-gray-500 mb-4">
-					WELCOME TO THE PNC
-				</h3>
-				<h1 className="sm:text-2xl text-xl font-bold text-gray-500 mb-4">
-					THE BEST
-					<span style={spanHederElement} className=""> RELIABLE SOLUTION </span>
-					FOR INDUSTRIAL WORKS
+				<span className="inline-block px-4 py-2 bg-[#00FAA8]/10 text-[#00FAA8] font-medium rounded-full text-sm mb-4">ABOUT PNC SOFT TECH</span>
+				<h1 className="text-3xl md:text-4xl font-bold text-[#041436] mb-6">
+					Your Reliable Partner For 
+					<span style={spanHederElement} className="ml-2">Digital Solutions</span>
 				</h1>
-				<p className="mb-4 text-gray-600 font-medium">
-					Rorem Ipsum is simply dummy text of the printin and type setting
-					industry. Lorem Ipsum has been the industry&apos;s standard dummy text
-					ever since the 1500s, when an unknown
-				</p>
-
-				<p className="mb-4 text-gray-600 font-medium">
-					Printer took a galley of type and scrambled it to make a type speci
-					menu book. It has survived not only five centuries, but also the leap
-					intoelectronic typesetting, remaining essentially unchanget was
-					popularised.
+				<p className="mb-6 text-gray-600 leading-relaxed">
+					PNC Soft Tech is a leading software development company specializing in web and mobile app development. 
+					We combine innovative technologies with industry best practices to deliver exceptional digital solutions.
+				</p>				<p className="mb-6 text-gray-600 leading-relaxed">
+					Our team of skilled developers, designers, and project managers work collaboratively to transform your ideas 
+					into high-quality, scalable, and user-friendly applications that drive business growth.
 				</p>
 			</div>
-			<div className="flex lg:flex-row flex-col justify-between">
-				<Card type="phone" text="Phone:" subText="+8801793278360" />
+			<div className="flex lg:flex-row flex-col justify-between gap-4"><Card type="phone" text="Phone:" subText="+8801793278360" />
 				<Card type="email" text="Email:" subText="pncsoft.tech@gmail.com" />
 			</div>
 		</div>
@@ -74,25 +65,25 @@ const Left = () => {
 };
 
 const Right = () => {
-	const element1 = {
-		borderColor: Colors.secondary,
-	};
-	const element2 = {
-		borderColor: Colors.primary,
-	};
 	return (
-		<div className="md:w-[45%] sm:w-[50%] md:mt-0 mt-10 w-[95%] mx-auto  relative">
-			<div
-				style={element1}
-				className={`border-4 sm:w-[400px] w-[250px] sm:h-[400px] h-[300px] rounded-md  border-[${Colors.secondary}]`}
-			>
-				<Image className="w-full h-full rounded-sm" src={img2} alt="" height={300} width={300}/>
+		<div className="md:w-[45%] sm:w-[50%] md:mt-0 mt-10 w-[95%] mx-auto relative">
+			<div className="border-4 border-[#00FAA8] rounded-lg sm:w-[400px] w-[250px] sm:h-[400px] h-[300px] shadow-xl overflow-hidden">
+				<Image 
+					className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" 
+					src={img2} 
+					alt="PNC Team at work" 
+					height={400} 
+					width={400}
+				/>
 			</div>
-			<div
-				style={element2}
-				className=" sm:w-[400px] w-[250px] sm:h-[400px] h-[300px] border-4 rounded-md absolute sm:left-28 sm:top-28 left-10 top-10"
-			>
-				<Image alt="" className="w-full h-full rounded-sm " src={img1} height={300} width={300}/>
+			<div className="border-4 border-[#041436] rounded-lg sm:w-[400px] w-[250px] sm:h-[400px] h-[300px] absolute sm:left-28 sm:top-28 left-10 top-10 shadow-xl overflow-hidden z-10 hover:z-20 transition-all duration-300">
+				<Image 
+					alt="PNC Office" 
+					className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" 
+					src={img1} 
+					height={400} 
+					width={400}
+				/>
 			</div>
 		</div>
 	);
@@ -112,9 +103,8 @@ const WelcomeSection = () => {
 		return () => {
 			window.removeEventListener("resize", checkScreenSize);
 		};
-	}, []);
-	return (
-		<div className="flex md:flex-row flex-col my-20 py-20 justify-between md:px-16 sm:px-10 px-5">
+	}, []);	return (
+		<div className="flex md:flex-row flex-col my-20 py-20 justify-between md:px-16 sm:px-10 px-5 bg-gray-50">
 			<Left />
 			{isScreenLarge && <Right />}
 		</div>

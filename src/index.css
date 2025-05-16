@@ -13,3 +13,32 @@
 .slick-dots li button:before {
 	color: orange;
 }
+
+@layer components {
+  .social-icon-link {
+    @apply p-2 rounded-full transition-all duration-300 hover:bg-[#00FAA8]/10;
+  }
+  
+  .btn-primary {
+    @apply px-6 py-2 bg-[#00FAA8] text-[#041436] rounded-md font-medium transition-all duration-300 hover:bg-[#00FAA8]/90 shadow-md;
+  }
+  
+  .btn-outline {
+    @apply px-6 py-2 bg-transparent border border-[#00FAA8] text-[#00FAA8] rounded-md font-medium transition-all duration-300 hover:bg-[#00FAA8]/10;
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 1s ease-in-out;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

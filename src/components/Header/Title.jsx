@@ -29,49 +29,59 @@ export default function Title() {
     }
   };
   
-  return (
-    <nav
-      className="title-container h-[80px] bg-gradient-to-r from-slate-900 to-slate-700   "
-      style={{ padding: "10px 0" }}
-    >
-      <div className=" flex flex-row justify-between pt-[5px]  px-[40px] ">
-        {/* Image part  */}
-        <div className="h-full  w-[120px] ">
-          <Link href="/">
+    return (
+    <div className="bg-gradient-to-r from-slate-900 to-slate-800 shadow-md">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
+        {/* Logo */}
+        <div className="h-12 w-auto">
+          <Link href="/" className="flex items-center">
             <Image
               src={LogoImage}
-              className="h-full w-full object--cover rounded--full  "
-              alt="bholaBar" height={300} width={300}
+              className="h-full w-auto"
+              alt="PNC Soft Tech Logo"
+              height={48} 
+              width={120}
+              priority
             />
           </Link>
         </div>
-        <div className=" text-[20px] font-bold leading-[40px] self-center md:text-[30px] text-[#fff] ">
-          <h1>Welcome To PNC Soft Tech</h1>
+
+        {/* Company Name for medium+ screens */}
+        <div className="hidden md:block text-xl lg:text-2xl font-bold text-white">
+          <span>Welcome to <span className="text-[#00FAA8]">PNC Soft Tech</span></span>
         </div>
 
-        <div className=" hidden md:flex flex-row cursor-pointer justify-evenly px-[20px] self-center  h-[35px] gap-6 ">
+        {/* Social Icons */}
+        <div className="flex items-center space-x-4">
           <a
             href="https://www.facebook.com/pncsoft.tech"
-            className="cursor-pointer transition ease-in duration-500  p-1 border-solid border-[2px] border-[#fff]  hover:bg-[#fff] rounded-full "
+            className="social-icon-link"
+            aria-label="Facebook"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <BiLogoFacebook className="text-[22px] text-[#fff] hover:text-[#00FAA8] " />
+            <BiLogoFacebook className="text-white hover:text-[#00FAA8] text-xl transition duration-300" />
           </a>
 
           <a
             href="https://www.linkedin.com/company/pnc-soft-tech/"
-            className=" p-1 border-solid border-[2px] border-[#fff] hover:bg-[#fff] rounded-full transition ease-in duration-500"
+            className="social-icon-link"
+            aria-label="LinkedIn"
+            target="_blank" 
+            rel="noopener noreferrer"
           >
-            <BiLogoLinkedin className="text-[22px] text-[#fff] hover:text-[#00FAA8] " />
+            <BiLogoLinkedin className="text-white hover:text-[#00FAA8] text-xl transition duration-300" />
           </a>
 
-          <div
+          <button
             onClick={openWhatsApp}
-            className=" p-1 border-solid border-[2px] border-[#fff] hover:bg-[#fff] rounded-full transition ease-in duration-500"
+            className="social-icon-link"
+            aria-label="WhatsApp"
           >
-            <BiLogoWhatsapp className="text-[22px] text-[#fff] hover:text-[#00FAA8] " />
-          </div>
+            <BiLogoWhatsapp className="text-white hover:text-[#00FAA8] text-xl transition duration-300" />
+          </button>
         </div>
       </div>
-    </nav>
+    </div>
   );
 }

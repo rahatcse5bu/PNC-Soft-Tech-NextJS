@@ -9,11 +9,9 @@ import {
   BiLogoWhatsapp,
 } from "react-icons/bi";
 import { BsTelephoneInbound } from "react-icons/bs";
+import { FaMapMarkerAlt } from "react-icons/fa";
 
 const Footer = () => {
-  const [impLinks, setImpLinks] = useState([]);
-  const [contactInfo, setContactInfo] = useState({});
-
   const openWhatsApp = () => {
     // Construct the URL to open WhatsApp
     const phoneNumber = "+8801793278360";
@@ -22,139 +20,131 @@ const Footer = () => {
     // Open WhatsApp in a new tab
     window.open(whatsappURL, "_blank");
   };
+  
   return (
-    <div className=" bg-gradient-to-r from-[#0b1d58] to-[#071952] mt-[10px] text-white font-serif text-sm leading-4 sm:p-[0] sm:m-[0] sticky  ">
-      <div className="flex flex-col justify-between gap-8 px-10 py-10 lg:flex-row md:px-20 md:gap-12">
-        <div className=" w-[100%] lg:w-[25%] flex flex-col gap-4 ">
-          <h1 className="text-[25px] mb-4 text-[#ffff] font-semibold tracking-widest">
-            PNC Soft Tech
-          </h1>
-          <p className=" text-[18px] text-[#fff] font-normal leading-[25px] ">
-            PNC Soft Tech is a mobile app and web development company that
-            offers a wide range of services and features using various
-            technologies
-          </p>
-        </div>
-
-        <div className="flex flex-col  gap-4 w-[100%] lg:w-[25%] ">
-          <h1 className="text-[25px] mb-4 text-[#ffff] font-semibold tracking-widest">
-            Quick Contact
-          </h1>
-          <div className="flex flex-row gap-2 ">
-            <h3 className=" flex flex-row gap-3 text-[15px]  text-[#fff] font-bold p-0 m-0 ">
-              <p className="text-[18px] text-[#fff] font-normal ">
-                <BsTelephoneInbound />
-              </p>
-            </h3>
-            <p className="text-[18px] text-[#fff] font-normal ">
-              +880 1793-278360
+    <footer className="bg-gradient-to-r from-[#041436] to-[#071952] text-white">
+      <div className="max-w-7xl mx-auto py-16 px-6 md:px-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          {/* Company Info */}
+          <div className="space-y-4">
+            <h2 className="text-2xl font-bold text-white mb-6 border-l-4 border-[#00FAA8] pl-3">PNC Soft Tech</h2>
+            <p className="text-gray-300 leading-relaxed">
+              PNC Soft Tech is a mobile app and web development company that
+              offers a wide range of services and features using various
+              technologies.
             </p>
-          </div>
-
-          <div className="flex flex-row gap-3 ">
-            <h3 className=" flex flex-row gap-1 text-[15px] text-[#fff] font-bold p-0 m-0 ">
-              <p className="text-[18px] text-[#fff] font-normal ">
-                <BiLogoGmail />
-              </p>
-            </h3>
-            <p className="text-[18px] text-[#fff] font-normal ">
-              pncsoft.tech@gmail.com
-            </p>
-          </div>
-
-          <div className="flex flex-row gap-3">
-            <p className="text-[18px]">
-              <BiLogoWhatsapp />
-            </p>
-            <p>+880 1793278360</p>
-          </div>
-        </div>
-
-        <div className=" flex flex-col  gap-4  sm:flex-row w-[100%] lg:w-[25%] ">
-          <div className="box-border flex flex-col gap-4 w-84 ">
-            <h1 className="text-[25px] mb-4 text-[#ffff] font-semibold tracking-widest">
-              Other Page
-            </h1>
-
-            <div className="flex flex-row gap-3 ">
-              <div className=" text-[18px] ">
-                <BiSolidAddToQueue />
-              </div>
-              <Link href="/services" className=" text-[18px] ">
-                Services
-              </Link>
-            </div>
-
-            <div className="flex flex-row gap-3 ">
-              <div className=" text-[18px] ">
-                <BiSolidAddToQueue />
-              </div>
-              <Link href="/faq" className=" text-[18px] ">
-                FAQ
-              </Link>
-            </div>
-
-            <div className="flex flex-row gap-3 ">
-              <div className=" text-[18px] ">
-                <BiSolidAddToQueue />
-              </div>
-              <Link href="/team" className=" text-[18px] ">
-                Team
-              </Link>
+            <div className="pt-4 flex items-center text-gray-300">
+              <FaMapMarkerAlt className="mr-2 text-[#00FAA8]" />
+              <p>BM College Road, Barisal, Bangladesh</p>
             </div>
           </div>
-        </div>
 
-        <div className=" w-[100%] lg:w-[25%] flex flex-col gap-2 item-center ">
-          <h1 className="text-lg text-[#ffff] mb-4 font-semibold tracking-widest">
-            Our Social Media
-          </h1>
+          {/* Quick Contact */}
+          <div className="space-y-4">
+            <h2 className="text-2xl font-bold text-white mb-6 border-l-4 border-[#00FAA8] pl-3">Quick Contact</h2>
+            <div className="space-y-4">
+              <div className="flex items-center group">
+                <div className="w-10 h-10 rounded-full bg-[#00FAA8]/20 flex items-center justify-center mr-3">
+                  <BsTelephoneInbound className="text-[#00FAA8] group-hover:animate-pulse" />
+                </div>
+                <p className="text-gray-300 group-hover:text-white transition-colors duration-300">+880 1793-278360</p>
+              </div>
+              
+              <div className="flex items-center group">
+                <div className="w-10 h-10 rounded-full bg-[#00FAA8]/20 flex items-center justify-center mr-3">
+                  <BiLogoGmail className="text-[#00FAA8] group-hover:animate-pulse" />
+                </div>
+                <p className="text-gray-300 group-hover:text-white transition-colors duration-300">pncsoft.tech@gmail.com</p>
+              </div>
+              
+              <div className="flex items-center group cursor-pointer" onClick={openWhatsApp}>
+                <div className="w-10 h-10 rounded-full bg-[#00FAA8]/20 flex items-center justify-center mr-3">
+                  <BiLogoWhatsapp className="text-[#00FAA8] group-hover:animate-pulse" />
+                </div>
+                <p className="text-gray-300 group-hover:text-white transition-colors duration-300">+880 1793278360</p>
+              </div>
+            </div>
+          </div>
 
-          <a
-            href="https://www.facebook.com/pncsoft.tech"
-            className="flex flex-row gap-3 cursor-pointer "
-          >
-            <p className="cursor-pointer bg-[#505e96]  p-2 border-solid border-[0px] border-[#fff]  hover:bg-[#fff] rounded-full transition ease-in duration-700 ">
-              <BiLogoFacebook className="text-[18px] text-[#fff] hover:text-[#00FAA8] " />
-            </p>
-            <p className="text-[18px] hover:text-[#00FAA8] transition ease-in duration-700 text-[#fff] p-2 ">
-              Facebook
-            </p>
-          </a>
+          {/* Other Pages */}
+          <div className="space-y-4">
+            <h2 className="text-2xl font-bold text-white mb-6 border-l-4 border-[#00FAA8] pl-3">Quick Links</h2>
+            <ul className="space-y-3">
+              <li className="group">
+                <Link href="/services" className="flex items-center text-gray-300 hover:text-white transition-colors duration-300">
+                  <div className="w-8 h-8 rounded-full bg-[#00FAA8]/20 flex items-center justify-center mr-3 group-hover:bg-[#00FAA8]/30 transition-colors duration-300">
+                    <BiSolidAddToQueue className="text-[#00FAA8]" />
+                  </div>
+                  Services
+                </Link>
+              </li>
+              <li className="group">
+                <Link href="/faq" className="flex items-center text-gray-300 hover:text-white transition-colors duration-300">
+                  <div className="w-8 h-8 rounded-full bg-[#00FAA8]/20 flex items-center justify-center mr-3 group-hover:bg-[#00FAA8]/30 transition-colors duration-300">
+                    <BiSolidAddToQueue className="text-[#00FAA8]" />
+                  </div>
+                  FAQ
+                </Link>
+              </li>
+              <li className="group">
+                <Link href="/team" className="flex items-center text-gray-300 hover:text-white transition-colors duration-300">
+                  <div className="w-8 h-8 rounded-full bg-[#00FAA8]/20 flex items-center justify-center mr-3 group-hover:bg-[#00FAA8]/30 transition-colors duration-300">
+                    <BiSolidAddToQueue className="text-[#00FAA8]" />
+                  </div>
+                  Team
+                </Link>
+              </li>
+            </ul>
+          </div>
 
-          <a
-            href="https://www.linkedin.com/company/pnc-soft-tech/"
-            className="flex flex-row gap-3 cursor-pointer "
-          >
-            <p className="cursor-pointer bg-[#505e96]  p-2 border-solid border-[0px] border-[#fff]  hover:bg-[#fff] rounded-full transition ease-in duration-700 ">
-              <BiLogoLinkedin className="text-[18px] text-[#fff] hover:text-[#00FAA8] " />
-            </p>
-            <p className="text-[18px] hover:text-[#00FAA8] transition ease-in duration-700 text-[#fff] p-2 ">
-              Linkedin
-            </p>
-          </a>
-
-          <div
-            onClick={openWhatsApp}
-            className="flex flex-row gap-3 cursor-pointer "
-          >
-            <p className="cursor-pointer bg-[#505e96]  p-2 border-solid border-[0px] border-[#fff]  hover:bg-[#fff] rounded-full transition ease-in duration-700 ">
-              <BiLogoWhatsapp className="text-[20px] text-[#fff] hover:text-[#00FAA8] " />
-            </p>
-            <p className="text-[18px] hover:text-[#00FAA8] transition ease-in duration-700 text-[#fff] p-2 ">
-              Whatsapp
-            </p>
+          {/* Social Media */}
+          <div className="space-y-4">
+            <h2 className="text-2xl font-bold text-white mb-6 border-l-4 border-[#00FAA8] pl-3">Connect With Us</h2>
+            <div className="space-y-4">
+              <a
+                href="https://www.facebook.com/pncsoft.tech"
+                className="flex items-center group"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="w-10 h-10 rounded-full bg-[#00FAA8]/20 flex items-center justify-center mr-3 group-hover:bg-[#00FAA8]/30 transition-all duration-300">
+                  <BiLogoFacebook className="text-[#00FAA8]" />
+                </div>
+                <span className="text-gray-300 group-hover:text-white transition-colors duration-300">Facebook</span>
+              </a>
+              
+              <a
+                href="https://www.linkedin.com/company/pnc-soft-tech/"
+                className="flex items-center group"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="w-10 h-10 rounded-full bg-[#00FAA8]/20 flex items-center justify-center mr-3 group-hover:bg-[#00FAA8]/30 transition-all duration-300">
+                  <BiLogoLinkedin className="text-[#00FAA8]" />
+                </div>
+                <span className="text-gray-300 group-hover:text-white transition-colors duration-300">LinkedIn</span>
+              </a>
+              
+              <div
+                onClick={openWhatsApp}
+                className="flex items-center group cursor-pointer"
+              >
+                <div className="w-10 h-10 rounded-full bg-[#00FAA8]/20 flex items-center justify-center mr-3 group-hover:bg-[#00FAA8]/30 transition-all duration-300">
+                  <BiLogoWhatsapp className="text-[#00FAA8]" />
+                </div>
+                <span className="text-gray-300 group-hover:text-white transition-colors duration-300">WhatsApp</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
-      <div className="bg-[#081643] p-[20px]  text-[15px] text-[#f2f2f2] ">
-        <p className="text-center text-[#fff] text-[17px] leading-[30px] tracking-widest ">
-          {" "}
-          Copyright © 2023 by PNC Soft Tech{" "}
+      
+      <div className="bg-[#031230] py-6">
+        <p className="text-center text-gray-300 text-sm md:text-base">
+          © {new Date().getFullYear()} PNC Soft Tech. All rights reserved.
         </p>
       </div>
-    </div>
+    </footer>
   );
 };
 

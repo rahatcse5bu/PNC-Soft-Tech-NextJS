@@ -1,5 +1,20 @@
 module.exports = {
-    siteUrl: 'http://localhost:3000/',
-    generateRobotsTxt: true, // Generate a robots.txt file
+    siteUrl: 'https://pncsoft.tech',
+    generateRobotsTxt: true,
+    robotsTxtOptions: {
+      policies: [
+        {
+          userAgent: '*',
+          allow: '/',
+        },
+      ],
+      additionalSitemaps: [
+        'https://pncsoft.tech/sitemap.xml',
+      ],
+    },
+    exclude: ['/server-sitemap.xml', '/404'],
+    outDir: 'public',
+    changefreq: 'weekly',
+    priority: 0.7,
   };
   

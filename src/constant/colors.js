@@ -82,43 +82,43 @@ const serviceDetails = [
 		image: img,
 		title: "Mobile App Development",
 		details:
-			"PNC Soft Tech specializes in developing mobile applications for iOS and Android platforms using Flutter or React Native.",
+			"Create stunning cross-platform mobile applications for iOS and Android using Flutter and React Native. Our apps offer native-like performance with beautiful UIs.",
 	},
 	{
 		image: img,
-		title: "Web Design",
+		title: "Web Development",
 		details:
-			"PNC Soft Tech offers web design services using a variety of technologies, including HTML, CSS, Vanilla JS, jQuery, Bootstrap, Tailwind CSS, and Bulma.",
+			"Build modern, responsive websites and web applications using React.js, Next.js, and other cutting-edge frameworks. From landing pages to complex web apps.",
 	},
 	{
 		image: img,
-		title: "PHP Development(Back End)",
+		title: "PHP Development",
 		details:
-			"PNC Soft Tech utilizes PHP, a popular server-side scripting language, to build dynamic and interactive web applications.",
+			"Powerful backend solutions using PHP and Laravel. We create secure, scalable web applications with efficient database management and API integrations.",
 	},
 	{
 		image: img,
 		title: "API Integration",
 		details:
-			"PNC Soft Tech has experience in integrating APIs in ReactJs,NextJS,raw HTML,CSS,Bootstrap and Flutter/React Navtive Application",
+			"Seamless API integration services connecting your applications with third-party services and platforms. REST API design, implementation, and optimization.",
 	},
 	{
 		image: img,
 		title: "MERN Stack Development",
 		details:
-			"PNC Soft Tech specializes in MERN stack development, which includes MongoDB (NoSQL database),NodeJS, Express.js (web application framework), React.js .",
+			"Full-stack web development using MongoDB, Express.js, React.js, and Node.js. Create dynamic, data-driven applications with modern JavaScript technologies.",
 	},
 	{
 		image: img,
-		title: "Flutter Development",
+		title: "UI/UX Design",
 		details:
-			"PNC Soft Tech utilizes Flutter, a UI toolkit, to develop natively compiled applications for mobile, web, and desktop from a single codebase.",
+			"User-centered design that delights your customers. We create intuitive, accessible, and visually appealing interfaces that enhance the user experience.",
 	},
 	{
 		image: img,
-		title: "React Native Development",
+		title: "E-commerce Solutions",
 		details:
-			"PNC Soft Tech utilizes React Native, a UI toolkit, to develop natively compiled applications for mobile, web, and desktop from a single codebase.",
+			"Custom e-commerce platforms with secure payment gateways, inventory management, and user-friendly shopping experiences that drive conversions and sales.",
 	},
 ];
 
