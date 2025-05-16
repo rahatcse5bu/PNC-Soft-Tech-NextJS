@@ -5,7 +5,7 @@ import MainLayout from "../Layout/MainLayout";
 import Head from "next/head";
 
 export default function App({ Component, pageProps }) {
-  const getLayout = Component.getLayout || ((page) => page);
+  const getLayout = Component.getLayout || ((page) => <MainLayout>{page}</MainLayout>);
 
   const structuredData = {
     "@context": "https://schema.org",
@@ -80,9 +80,8 @@ export default function App({ Component, pageProps }) {
   const defaultDescription = "PNC Soft Tech offers cutting-edge web and mobile app development services including Flutter apps, MERN stack, React and Next.js development with guaranteed client satisfaction.";
   const defaultImage = "https://pncsoft.tech/og-image.jpg";
   const defaultUrl = "https://pncsoft.tech";
-  
-  return (
-    <MainLayout>
+    return (
+    <>
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -120,7 +119,7 @@ export default function App({ Component, pageProps }) {
           }}
         />
       </Head>
-      <Component {...pageProps} />
-    </MainLayout>
+      {getLayout(<Component {...pageProps} />)}
+    </>
   );
 }

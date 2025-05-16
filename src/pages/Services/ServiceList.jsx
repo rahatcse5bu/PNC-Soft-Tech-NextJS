@@ -96,6 +96,4 @@ const StatCard = ({icon, count, label, index}) => {
   );
 };
 
-export default ServiceList
-
-export default ServiceList
+export default ServiceList;
