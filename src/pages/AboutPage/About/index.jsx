@@ -1,12 +1,12 @@
 import Banner from "../../../Shared/Banner/Banner";
-import ChooseSection from "../ChooseSection/ChooseSection";
-import PointSection from "../PointSection/PointSection";
-import ProjectSection from "../ProjectSection/ProjectSection";
-import WelcomeSection from "../WelcomeSection/WelcomeSection";
+import ChooseSection from "../../../components/About/ChooseSection/ChooseSection";
+import PointSection from "../../../components/About/PointSection/PointSection";
+import ProjectSection from "../../../components/About/ProjectSection/ProjectSection";
+import WelcomeSection from "../../../components/About/WelcomeSection/WelcomeSection";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import TeamMembers from "../TeamMembers/TeamMembers";
-import Feedbacks from "../Feedbacks/Feedbacks";
+import TeamMembers from "../../../components/About/TeamMembers/TeamMembers";
+import Feedbacks from "../../../components/About/Feedbacks/Feedbacks";
 import { ScrollToTop } from "../../../constant/ScrollToTop";
 
 const About = () => {
