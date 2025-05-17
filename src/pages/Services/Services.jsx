@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
-import ServiceCart from './ServiceCart'
+import ServiceCart from '../../components/Services/ServiceCart'
 import { serviceDetails } from '../../constant/colors'
 
 const Services = () => {

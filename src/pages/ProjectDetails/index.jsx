@@ -3,6 +3,8 @@ import React from 'react'
 import Banner from '../../Shared/Banner/Banner'
 import Details from './Details'
 import { ScrollToTop } from '../../constant/ScrollToTop'
+import MainLayout from '../../Layout/MainLayout'
+
 const ServiceDetails = () => {
   return (
     <div>
@@ -13,5 +15,7 @@ const ServiceDetails = () => {
     </div>
   )
 }
+
+ServiceDetails.getLayout = (page) => <MainLayout>{page}</MainLayout>;
 
 export default ServiceDetails

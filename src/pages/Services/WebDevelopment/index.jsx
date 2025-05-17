@@ -1,246 +1,246 @@
-import React from 'react'
-import Banner from '../../../Shared/Banner/Banner'
-import { ScrollToTop } from '../../../constant/ScrollToTop'
-import Image from 'next/image'
-import { FaCode, FaPalette, FaMobileAlt, FaServer, FaRegCheckCircle, FaLaptopCode, FaDatabase, FaRocket } from 'react-icons/fa'
-import Link from 'next/link'
+import React from 'react';
+import PageHeader from '../../../components/common/PageHeader';
+import Image from 'next/image';
 
 const WebDevelopment = () => {
-  const technologies = [
-    "React.js & Next.js",
-    "MERN Stack (MongoDB, Express, React, Node.js)",
-    "PHP & Laravel",
-    "JavaScript & TypeScript",
-    "HTML5, CSS3, Tailwind CSS, Bootstrap",
-    "MySQL, PostgreSQL, MongoDB",
-    "REST API Design & Development",
-    "AWS, Vercel, Netlify Deployment"
-  ]
-
-  const services = [
-    {
-      icon: <FaLaptopCode />,
-      title: "Frontend Development",
-      description: "We create responsive, interactive, and visually appealing frontend interfaces using modern frameworks like React.js and Next.js."
-    },
-    {
-      icon: <FaServer />,
-      title: "Backend Development",
-      description: "Our backend solutions are built with Node.js, Express, PHP or Laravel to create secure, scalable server-side applications."
-    },
-    {
-      icon: <FaDatabase />,
-      title: "Database Integration",
-      description: "We implement and optimize database solutions including MySQL, PostgreSQL, and MongoDB for efficient data management."
-    },
-    {
-      icon: <FaRocket />,
-      title: "Web Application Deployment",
-      description: "We handle the complete deployment process on platforms like AWS, Vercel, or Netlify with proper configuration and optimization."
-    }
-  ]
-
   return (
-    <div>
-      <ScrollToTop />
-      <Banner title="Web Development" linkText="Services / Web Development" />
-      
-      {/* Hero Section */}
-      <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
-        <div className="max-w-7xl mx-auto px-6 md:px-10">
-          <div className="flex flex-col md:flex-row items-center gap-12">
-            <div className="md:w-1/2">
-              <span className="inline-block px-4 py-2 bg-[#00FAA8]/10 text-[#00FAA8] font-medium rounded-full text-sm mb-4">WEB SOLUTIONS</span>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#041436] mb-6">Web Development Services</h1>
-              <p className="text-gray-600 mb-8">
-                PNC Soft Tech builds modern, responsive, and high-performance web applications tailored to your business needs. 
-                From static marketing websites to complex web applications, we create solutions that engage users and drive conversions.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <Link href="/ContactPage">
-                  <span className="inline-block px-6 py-3 bg-[#041436] text-white rounded-lg hover:bg-[#041436]/90 transition-colors duration-300">Request a Quote</span>
-                </Link>
-                <Link href="/ProjectsPage">
-                  <span className="inline-block px-6 py-3 border border-[#041436] text-[#041436] rounded-lg hover:bg-gray-50 transition-colors duration-300">View Portfolio</span>
-                </Link>
-              </div>
-            </div>
-            <div className="md:w-1/2">
-              <div className="relative">
-                <div className="rounded-lg overflow-hidden shadow-xl">
-                  <Image 
-                    src="/profile/pnc.jpg" 
-                    alt="Web Development" 
-                    width={600} 
-                    height={400} 
-                    className="w-full h-auto object-cover"
-                  />
-                </div>
-                <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-[#00FAA8]/20 rounded-full z-0"></div>
-                <div className="absolute -top-6 -left-6 w-24 h-24 bg-[#041436]/10 rounded-full z-0"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Our Services */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-6 md:px-10">
-          <div className="text-center mb-16">
-            <span className="inline-block px-4 py-2 bg-[#00FAA8]/10 text-[#00FAA8] font-medium rounded-full text-sm mb-4">OUR SERVICES</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#041436] mb-6">Web Development Solutions</h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">
-              We provide comprehensive web development services to help businesses establish a strong online presence.
-            </p>
-          </div>
+    <div className="bg-gray-50 min-h-screen">
+      <div className="container mx-auto px-4 py-12">
+        <PageHeader 
+          title="Web Development Services" 
+          description="Custom web solutions tailored to your business needs"
+        />
+        
+        {/* What We Do For Your Business Section */}
+        <div className="my-16">
+          <h2 className="text-3xl font-bold text-center mb-16 relative">
+            What We Do For Your Business
+            <div className="absolute w-24 h-1 bg-blue-600 bottom-[-10px] left-1/2 transform -translate-x-1/2"></div>
+          </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="bg-gray-50 rounded-lg p-8 hover:shadow-lg transition-all duration-300">
-                <div className="w-16 h-16 flex items-center justify-center bg-[#00FAA8]/20 text-[#041436] rounded-lg text-2xl mb-6">
-                  {service.icon}
-                </div>
-                <h3 className="text-xl font-bold text-[#041436] mb-4">{service.title}</h3>
-                <p className="text-gray-600">{service.description}</p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="rounded-lg overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-500">
+              <div className="relative h-96 w-full">
+                <Image 
+                  src="/images/web-development-process.jpg" 
+                  alt="Web Development Process" 
+                  layout="fill"
+                  objectFit="cover"
+                  className="transition-all duration-500 hover:opacity-90"
+                />
               </div>
-            ))}
+            </div>
+            
+            <div>
+              <div className="space-y-6">
+                <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border-l-4 border-blue-600">
+                  <div className="flex items-start">
+                    <div className="bg-blue-100 rounded-full p-3 mr-4">
+                      <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold mb-2">Strategic Planning</h3>
+                      <p className="text-gray-600">We analyze your business needs and create a tailored web strategy to maximize your online potential.</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border-l-4 border-blue-600">
+                  <div className="flex items-start">
+                    <div className="bg-blue-100 rounded-full p-3 mr-4">
+                      <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold mb-2">Custom Development</h3>
+                      <p className="text-gray-600">Our experts build scalable, responsive websites and applications that perfectly align with your business objectives.</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border-l-4 border-blue-600">
+                  <div className="flex items-start">
+                    <div className="bg-blue-100 rounded-full p-3 mr-4">
+                      <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold mb-2">User-Centric Design</h3>
+                      <p className="text-gray-600">We create intuitive, engaging interfaces that enhance user experience and drive conversions.</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border-l-4 border-blue-600">
+                  <div className="flex items-start">
+                    <div className="bg-blue-100 rounded-full p-3 mr-4">
+                      <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold mb-2">Performance Optimization</h3>
+                      <p className="text-gray-600">We ensure your web solutions are lightning-fast, SEO-friendly, and optimized for all devices.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </section>
+        
+        {/* Service Cards Section */}
+        <h2 className="text-3xl font-bold text-center mb-12 mt-20 relative">
+          Our Web Development Services
+          <div className="absolute w-24 h-1 bg-blue-600 bottom-[-10px] left-1/2 transform -translate-x-1/2"></div>
+        </h2>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
+          <div className="service-card p-8 bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border-t-4 border-blue-600">
+            <div className="flex items-center mb-4">
+              <div className="bg-blue-100 p-3 rounded-full mr-4">
+                <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold">Frontend Development</h3>
+            </div>
+            <p className="text-gray-600 mb-4">Modern, responsive web applications using React, Next.js, and other cutting-edge technologies.</p>
+            <ul className="text-gray-600 space-y-2">
+              <li className="flex items-center">
+                <svg className="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
+                </svg>
+                Responsive design for all devices
+              </li>
+              <li className="flex items-center">
+                <svg className="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
+                </svg>
+                Modern JavaScript frameworks
+              </li>
+              <li className="flex items-center">
+                <svg className="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
+                </svg>
+                Interactive UI elements
+              </li>
+            </ul>
+          </div>
 
-      {/* Development Process */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6 md:px-10">
-          <div className="flex flex-col lg:flex-row items-center gap-12">
-            <div className="lg:w-1/2">
-              <div className="relative">
-                <div className="grid grid-cols-2 gap-6">
-                  <div className="rounded-lg overflow-hidden shadow-lg">
-                    <Image 
-                      src="/profile/pnc.jpg" 
-                      alt="Web Design" 
-                      width={300} 
-                      height={300} 
-                      className="w-full h-auto"
-                    />
-                  </div>
-                  <div className="rounded-lg overflow-hidden shadow-lg mt-12">
-                    <Image 
-                      src="/profile/pnc.jpg" 
-                      alt="Web Development" 
-                      width={300} 
-                      height={300} 
-                      className="w-full h-auto"
-                    />
-                  </div>
-                  <div className="rounded-lg overflow-hidden shadow-lg">
-                    <Image 
-                      src="/profile/pnc.jpg" 
-                      alt="API Development" 
-                      width={300} 
-                      height={300} 
-                      className="w-full h-auto"
-                    />
-                  </div>
-                  <div className="rounded-lg overflow-hidden shadow-lg mt-12">
-                    <Image 
-                      src="/profile/pnc.jpg" 
-                      alt="Web Performance" 
-                      width={300} 
-                      height={300} 
-                      className="w-full h-auto"
-                    />
-                  </div>
-                </div>
+          <div className="service-card p-8 bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border-t-4 border-blue-600">
+            <div className="flex items-center mb-4">
+              <div className="bg-blue-100 p-3 rounded-full mr-4">
+                <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path>
+                </svg>
               </div>
+              <h3 className="text-xl font-bold">Backend Development</h3>
             </div>
-            <div className="lg:w-1/2">
-              <span className="inline-block px-4 py-2 bg-[#00FAA8]/10 text-[#00FAA8] font-medium rounded-full text-sm mb-4">TECHNOLOGIES</span>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#041436] mb-6">Our Web Development Stack</h2>
-              <p className="text-gray-600 mb-8">
-                We leverage the latest web technologies and frameworks to build fast, secure, and scalable web applications:
-              </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {technologies.map((tech, index) => (
-                  <div key={index} className="flex items-start space-x-3">
-                    <FaRegCheckCircle className="text-[#00FAA8] mt-1 flex-shrink-0" />
-                    <span className="text-gray-700">{tech}</span>
-                  </div>
-                ))}
+            <p className="text-gray-600 mb-4">Robust server-side solutions with Node.js, Python, and various database technologies.</p>
+            <ul className="text-gray-600 space-y-2">
+              <li className="flex items-center">
+                <svg className="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
+                </svg>
+                API development and integration
+              </li>
+              <li className="flex items-center">
+                <svg className="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
+                </svg>
+                Database design and optimization
+              </li>
+              <li className="flex items-center">
+                <svg className="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
+                </svg>
+                Secure authentication systems
+              </li>
+            </ul>
+          </div>
+
+          <div className="service-card p-8 bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border-t-4 border-blue-600">
+            <div className="flex items-center mb-4">
+              <div className="bg-blue-100 p-3 rounded-full mr-4">
+                <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                </svg>
               </div>
+              <h3 className="text-xl font-bold">E-Commerce Solutions</h3>
             </div>
+            <p className="text-gray-600 mb-4">Custom online stores and shopping experiences built for performance and conversion.</p>
+            <ul className="text-gray-600 space-y-2">
+              <li className="flex items-center">
+                <svg className="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
+                </svg>
+                Custom shopping cart systems
+              </li>
+              <li className="flex items-center">
+                <svg className="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
+                </svg>
+                Payment gateway integration
+              </li>
+              <li className="flex items-center">
+                <svg className="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
+                </svg>
+                Inventory management systems
+              </li>
+            </ul>
+          </div>
+
+          <div className="service-card p-8 bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border-t-4 border-blue-600">
+            <div className="flex items-center mb-4">
+              <div className="bg-blue-100 p-3 rounded-full mr-4">
+                <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold">Web Maintenance</h3>
+            </div>
+            <p className="text-gray-600 mb-4">Ongoing support, updates, and optimization to keep your web applications running smoothly.</p>
+            <ul className="text-gray-600 space-y-2">
+              <li className="flex items-center">
+                <svg className="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
+                </svg>
+                Regular security updates
+              </li>
+              <li className="flex items-center">
+                <svg className="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
+                </svg>
+                Performance monitoring
+              </li>
+              <li className="flex items-center">
+                <svg className="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
+                </svg>
+                Content updates and management
+              </li>
+            </ul>
           </div>
         </div>
-      </section>
-      
-      {/* Development Process */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-6 md:px-10">
-          <div className="text-center mb-16">
-            <span className="inline-block px-4 py-2 bg-[#00FAA8]/10 text-[#00FAA8] font-medium rounded-full text-sm mb-4">OUR PROCESS</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#041436] mb-6">Web Development Process</h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">
-              We follow a comprehensive and collaborative approach to web development to ensure your project is delivered on time and exceeds expectations.
-            </p>
-          </div>
-          
-          <div className="relative">
-            <div className="hidden md:block absolute left-0 right-0 top-1/2 h-1 bg-[#00FAA8]/30 -translate-y-1/2 z-0"></div>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10">
-              <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 text-center">
-                <div className="w-16 h-16 flex items-center justify-center bg-[#041436] text-white rounded-full text-xl mx-auto mb-4 relative">
-                  <span>01</span>
-                </div>
-                <h3 className="text-lg font-bold text-[#041436] mb-3">Discovery & Planning</h3>
-                <p className="text-gray-600 text-sm">Understanding your business goals, target audience, and project requirements.</p>
-              </div>
-              
-              <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 text-center">
-                <div className="w-16 h-16 flex items-center justify-center bg-[#041436] text-white rounded-full text-xl mx-auto mb-4">
-                  <span>02</span>
-                </div>
-                <h3 className="text-lg font-bold text-[#041436] mb-3">Design & Prototyping</h3>
-                <p className="text-gray-600 text-sm">Creating wireframes, mockups, and interactive prototypes for your approval.</p>
-              </div>
-              
-              <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 text-center">
-                <div className="w-16 h-16 flex items-center justify-center bg-[#041436] text-white rounded-full text-xl mx-auto mb-4">
-                  <span>03</span>
-                </div>
-                <h3 className="text-lg font-bold text-[#041436] mb-3">Development & Testing</h3>
-                <p className="text-gray-600 text-sm">Building the website/application with clean code and comprehensive testing.</p>
-              </div>
-              
-              <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 text-center">
-                <div className="w-16 h-16 flex items-center justify-center bg-[#041436] text-white rounded-full text-xl mx-auto mb-4">
-                  <span>04</span>
-                </div>
-                <h3 className="text-lg font-bold text-[#041436] mb-3">Deployment & Support</h3>
-                <p className="text-gray-600 text-sm">Launching your project and providing ongoing maintenance and support.</p>
-              </div>
-            </div>
-          </div>
+        
+        {/* CTA Section */}
+        <div className="mt-20 bg-gradient-to-r from-blue-600 to-indigo-700 rounded-xl p-8 md:p-12 shadow-xl text-center text-white">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready to Start Your Web Project?</h2>
+          <p className="text-lg mb-8 max-w-2xl mx-auto">Our team of expert developers is ready to turn your vision into reality. Let's create something amazing together.</p>
+          <button className="bg-white text-blue-600 font-semibold px-8 py-3 rounded-full shadow-md hover:bg-opacity-90 transition duration-300">
+            Get a Free Consultation
+          </button>
         </div>
-      </section>
-      
-      {/* CTA Section */}
-      <section className="py-20 bg-[#041436] text-white">
-        <div className="max-w-7xl mx-auto px-6 md:px-10 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Start Your Web Project?</h2>
-          <p className="text-gray-300 max-w-3xl mx-auto mb-10">
-            Whether you need a new website, a web application, or want to improve your existing digital presence,
-            our team is ready to help you achieve your goals with cutting-edge web development solutions.
-          </p>
-          <Link href="/ContactPage">
-            <span className="inline-block px-8 py-4 bg-[#00FAA8] text-[#041436] rounded-lg hover:bg-[#00FAA8]/90 transition-colors duration-300 font-medium">
-              Contact Us Today
-            </span>
-          </Link>
-        </div>
-      </section>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default WebDevelopment
+export default WebDevelopment;

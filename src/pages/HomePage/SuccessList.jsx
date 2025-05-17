@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-unused-vars */
 import React from 'react'
-import ServiceList from '../Services/ServiceList'
+import ServiceList from '../../components/Services/ServiceList'
 
 const SuccessList = () => {
   return (

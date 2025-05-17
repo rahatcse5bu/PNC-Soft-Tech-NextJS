@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://pncsoft.tech
+
+# Sitemaps
+Sitemap: https://pncsoft.tech/sitemap.xml

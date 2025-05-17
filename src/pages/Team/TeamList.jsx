@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
 import { teamDetails } from '../../constant/colors'
-import TeamCart from './TeamCart'
+import TeamCart from '../../components/Team/TeamCart'
 
 const TeamList = () => {
   return (
