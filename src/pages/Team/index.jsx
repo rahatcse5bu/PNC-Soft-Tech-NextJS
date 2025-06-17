@@ -7,9 +7,9 @@ const TeamPage = () => {
   const teamMembers = [
     {
       id: 1,
-      name: "John Doe",
+      name: "Md. Rahat",
       position: "CEO & Founder",
-      bio: "With over 15 years of experience in software development and business leadership, John has built PNC Soft Tech from the ground up.",
+      bio: "With over 5 years of experience in software development and business leadership, John has built PNC Soft Tech from the ground up.",
       image: "/images/team/team-member-1.jpg",
       socialLinks: {
         linkedin: "#",
@@ -20,9 +20,9 @@ const TeamPage = () => {
     },
     {
       id: 2,
-      name: "Jane Smith",
+      name: "Sujan Mridha",
       position: "CTO",
-      bio: "Jane leads our technical teams and ensures we stay at the cutting edge of technology while delivering robust solutions.",
+      bio: "Sujan leads our technical teams and ensures we stay at the cutting edge of technology while delivering robust solutions.",
       image: "/images/team/team-member-2.jpg",
       socialLinks: {
         linkedin: "#",
@@ -33,9 +33,9 @@ const TeamPage = () => {
     },
     {
       id: 3,
-      name: "David Wilson",
-      position: "Lead Developer",
-      bio: "David is an expert in full-stack development with a passion for clean code and optimal performance.",
+      name: "Md. Anis Molla",
+      position: "MERN Stack Developer",
+      bio: "Anis is an expert in full-stack development with a passion for clean code and optimal performance.",
       image: "/images/team/team-member-3.jpg",
       socialLinks: {
         linkedin: "#",
@@ -46,9 +46,9 @@ const TeamPage = () => {
     },
     {
       id: 4,
-      name: "Sarah Johnson",
+      name: "Razinul Karim ",
       position: "UI/UX Designer",
-      bio: "Sarah creates beautiful and intuitive user interfaces that bridge the gap between human needs and digital solutions.",
+      bio: "Razinul creates beautiful and intuitive user interfaces that bridge the gap between human needs and digital solutions.",
       image: "/images/team/team-member-4.jpg",
       socialLinks: {
         linkedin: "#",
@@ -59,9 +59,9 @@ const TeamPage = () => {
     },
     {
       id: 5,
-      name: "Michael Brown",
+      name: "Md. Rahat",
       position: "Mobile Development Lead",
-      bio: "Michael specializes in creating seamless mobile experiences across iOS and Android platforms.",
+      bio: "Rahat specializes in creating seamless mobile experiences across iOS and Android platforms.",
       image: "/images/team/team-member-5.jpg",
       socialLinks: {
         linkedin: "#",
@@ -72,9 +72,22 @@ const TeamPage = () => {
     },
     {
       id: 6,
-      name: "Emily Davis",
-      position: "Digital Marketing Specialist",
-      bio: "Emily leverages data-driven strategies to enhance our clients' market presence and drive customer engagement.",
+      name: "Sujan Mridha",
+      position: "MERN Stack Developer",
+      bio: "Sujan leverages data-driven strategies to enhance our clients' market presence and drive customer engagement.",
+      image: "/images/team/team-member-6.jpg",
+      socialLinks: {
+        linkedin: "#",
+        twitter: "#",
+        github: "#"
+      },
+      expertise: ["SEO", "Content Strategy", "Analytics"]
+    }
+    {
+      id: 7,
+      name: "Subal Karmaker",
+      position: "Flutter  Developer",
+      bio: "Subal leverages data-driven strategies to enhance our clients' market presence and drive customer engagement.",
       image: "/images/team/team-member-6.jpg",
       socialLinks: {
         linkedin: "#",
