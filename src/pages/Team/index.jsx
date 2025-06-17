@@ -10,7 +10,7 @@ const TeamPage = () => {
       name: "Md. Rahat",
       position: "CEO & Founder",
       bio: "With over 5 years of experience in software development and business leadership, John has built PNC Soft Tech from the ground up.",
-      image: "/images/team/team-member-1.jpg",
+      image: "/images/team/Rahat-No-BG.png",
       socialLinks: {
         linkedin: "#",
         twitter: "#",
@@ -98,7 +98,7 @@ const TeamPage = () => {
     }
   ];
   
-  const leadershipTeam = teamMembers.slice(0, 2);
+  const leadershipTeam = teamMembers.slice(0, 3);
   const coreTeam = teamMembers.slice(2);
 
   return (
