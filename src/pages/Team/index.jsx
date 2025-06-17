@@ -82,7 +82,7 @@ const TeamPage = () => {
         github: "#"
       },
       expertise: ["SEO", "Content Strategy", "Analytics"]
-    }
+    },
     {
       id: 7,
       name: "Subal Karmaker",
