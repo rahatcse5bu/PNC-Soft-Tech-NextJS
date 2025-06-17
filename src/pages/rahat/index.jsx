@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { Download, Play, ChevronRight, FileText, Video, Image, ArrowDown, Box, ExternalLink, Check } from 'lucide-react';
 
-const index = () => {
+const Index = () => {
   const [activeTab, setActiveTab] = useState('download');
   const [showPreview, setShowPreview] = useState(false);
   const [downloadStarted, setDownloadStarted] = useState({
@@ -18,10 +17,83 @@ const index = () => {
     }, 3000);
   };
   
+  // Icon components - Fixed all missing components
+  const Download = ({ size = 20 }) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+      <polyline points="7,10 12,15 17,10"/>
+      <line x1="12" y1="15" x2="12" y2="3"/>
+    </svg>
+  );
+
+  const Check = ({ size = 20, className = "" }) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className={className}>
+      <polyline points="20,6 9,17 4,12"/>
+    </svg>
+  );
+
+  const Play = ({ size = 20, className = "" }) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className={className}>
+      <polygon points="5,3 19,12 5,21"/>
+    </svg>
+  );
+
+  const Video = ({ size = 20, className = "" }) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className={className}>
+      <polygon points="23,7 16,12 23,17"/>
+      <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+    </svg>
+  );
+
+  const FileText = ({ size = 20, className = "" }) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className={className}>
+      <path d="M14,2 L14,8 L20,8 M14,2 L20,8 L20,20 C20,21.1046 19.1046,22 18,22 L6,22 C4.89543,22 4,21.1046 4,20 L4,4 C4,2.89543 4.89543,2 6,2 L14,2 Z"/>
+      <line x1="16" y1="13" x2="8" y2="13"/>
+      <line x1="16" y1="17" x2="8" y2="17"/>
+      <polyline points="10,9 9,9 8,9"/>
+    </svg>
+  );
+
+  const Image = ({ size = 20, className = "" }) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className={className}>
+      <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+      <circle cx="8.5" cy="8.5" r="1.5"/>
+      <polyline points="21,15 16,10 5,21"/>
+    </svg>
+  );
+
+  const Box = ({ size = 20, className = "" }) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className={className}>
+      <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+      <polyline points="3.27,6.96 12,12.01 20.73,6.96"/>
+      <line x1="12" y1="22.08" x2="12" y2="12"/>
+    </svg>
+  );
+
+  const ChevronRight = ({ size = 20, className = "" }) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className={className}>
+      <polyline points="9,18 15,12 9,6"/>
+    </svg>
+  );
+
+  const ExternalLink = ({ size = 20, className = "" }) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className={className}>
+      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+      <polyline points="15,3 21,3 21,9"/>
+      <line x1="10" y1="14" x2="21" y2="3"/>
+    </svg>
+  );
+
+  const ArrowDown = ({ size = 20, className = "" }) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className={className}>
+      <line x1="12" y1="5" x2="12" y2="19"/>
+      <polyline points="19,12 12,19 5,12"/>
+    </svg>
+  );
+  
   return (
-    <div className="bg-white min-h-screen flex flex-col">
-      {/* Header with Flutter branding */}
-      <header className="bg-gradient-to-r from-blue-600 to-cyan-500 text-white py-6">
+    <div className="min-h-screen bg-white flex flex-col">
+      <header className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg">
         <div className="container mx-auto px-6 flex items-center justify-between">
           <div className="flex items-center gap-4">
             <svg viewBox="0 0 200 200" width="40" height="40">
@@ -321,4 +393,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;
